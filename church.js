@@ -1,4 +1,4 @@
-let if_lambda = b => {
+const if_lambda = b => {
   return x => {
     return y => {
       return b(x)(y);
@@ -6,13 +6,13 @@ let if_lambda = b => {
   };
 }
 
-let true_lambda  = x => {
+const true_lambda  = x => {
   return y => {
     return x;
   };
 };
 
-let false_lambda = x => {
+const false_lambda = x => {
   return  y => {
     return y;
   };
