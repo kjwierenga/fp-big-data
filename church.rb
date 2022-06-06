@@ -1,8 +1,8 @@
 
-cif = -> (b) { -> (x) { -> (y) { b.call(x).call(y) } } }
+if_lambda = -> (b) { -> (x) { -> (y) { b.call(x).call(y) } } }
 
-ctrue  = -> (x) { -> (y) { x } }
-cfalse = -> (x) { -> (y) { y } }
+true_lambda  = -> (x) { -> (y) { x } }
+false_lambda = -> (x) { -> (y) { y } }
 
-puts "if True  a b = #{cif.call(ctrue).call("a").call("b")}"  # a
-puts "if False a b = #{cif.call(cfalse).call("a").call("b")}" # b
+puts "if True  a b = #{if_lambda.call(true_lambda).call("a").call("b")}"  # a
+puts "if False a b = #{if_lambda.call(false_lambda).call("a").call("b")}" # b
