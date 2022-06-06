@@ -1,19 +1,19 @@
-let if_lambda = (b) => {
-  return (x) => {
-    return (y) => {
+let if_lambda = b => {
+  return x => {
+    return y => {
       return b(x)(y);
     };
   };
 }
 
-let true_lambda  = (x) => {
-  return (y) => {
+let true_lambda  = x => {
+  return y => {
     return x;
   };
 };
 
-let false_lambda = (x) => {
-  return (y) => {
+let false_lambda = x => {
+  return  y => {
     return y;
   };
 };
